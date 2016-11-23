@@ -1,0 +1,84 @@
+/* Fonts */
+	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic);
+/* /Fonts */
+/* Option */
+	body {
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+/* /Option */
+/* Navigation */
+	.navbar .nav li {
+		font-size: 18px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.navbar .navbar-brand {
+		font-size: 20px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+/* /Navigation */
+/* Description */
+	.jumbotron h3 {
+		text-align: center;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+/* /Description */
+/* Indicators */
+	.col-md-3 .panel-heading,
+	.col-md-12 .panel-heading {
+		text-align: center;
+		text-decoration: underline;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.col-md-3 .list-group-item span,
+	.col-md-3 .panel-body span,
+	.col-md-12 .list-group-item span,
+	.col-md-12 .panel-body span {
+		font-weight: bold;
+	}
+	.col-md-3 .list-group .list-group-item,
+	.col-md-3 .panel-body p,
+	.col-md-12 .list-group .list-group-item,
+	.col-md-12 .panel-body p {
+		text-align: center;
+		font-size: 18px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.col-md-3 #status_office_system {
+		color: green;
+	}
+	.col-md-12 td {
+		text-align: center;
+		font-size: 18px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+/* /Indicators */
+/* Find */
+	.col-md-12 .panel-heading {
+		text-align: center;
+		text-decoration: underline;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.col-md-12 form {
+		text-align: center;
+	}
+	.col-md-12 .list-group .list-group-item{
+		text-align: center;
+		font-size: 18px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.col-md-12 .list-group-item span {
+		font-weight: bold;
+	}
+/* /Find */
+/* Footer */
+	footer > p {
+		text-align: center;
+		font-size: 18px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+/* /Footer */
