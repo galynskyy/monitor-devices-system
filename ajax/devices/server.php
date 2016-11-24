@@ -24,10 +24,20 @@
 	$query->execute();
 	$result_total = $query->fetchColumn();
 	
+	if($result_online > 0)
+	{
+		$result_uptime = round(($result_online * 100) / $result_total);
+	}
+	else
+	{
+		$result_uptime = 0;
+	}
+	
 	$result_data = [
 		"online"	=>	$result_online,
 		"offline"	=>	$result_offline,
-		"total"	=>	$result_total
+		"total"	=>	$result_total,
+		"uptime" => $result_uptime
 	];
 	
 	echo json_encode($result_data);

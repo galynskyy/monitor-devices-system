@@ -49,6 +49,7 @@
 				$("#monitor_server_online").html(data.online);
 				$("#monitor_server_offline").html(data.offline);
 				$("#monitor_server_total").html(data.total);
+				$("#monitor_server_uptime").html(data.uptime + " %");
 			}
 		});
 	}
@@ -61,6 +62,7 @@
 				$("#monitor_printer_online").html(data.online);
 				$("#monitor_printer_offline").html(data.offline);
 				$("#monitor_printer_total").html(data.total);
+				$("#monitor_printer_uptime").html(data.uptime + " %");
 			}
 		});
 	}
@@ -73,6 +75,7 @@
 				$("#monitor_network_online").html(data.online);
 				$("#monitor_network_offline").html(data.offline);
 				$("#monitor_network_total").html(data.total);
+				$("#monitor_network_uptime").html(data.uptime + " %");
 			}
 		});
 	}
@@ -85,6 +88,7 @@
 				$("#monitor_phone_online").html(data.online);
 				$("#monitor_phone_offline").html(data.offline);
 				$("#monitor_phone_total").html(data.total);
+				$("#monitor_phone_uptime").html(data.uptime + " %");
 			}
 		});
 	}
