@@ -10,6 +10,8 @@
 		GetStatsNetwork();
 		GetStatsPhone();
 		GetStatsPrinter();
+		GetStatsVideo();
+		GetStatsComputer();
 	}
 	function Update()
 	{
@@ -18,6 +20,8 @@
 		setInterval(GetStatsNetwork, 3000);
 		setInterval(GetStatsPhone, 3000);
 		setInterval(GetStatsPrinter, 3000);
+		setInterval(GetStatsVideo, 3000);
+		setInterval(GetStatsComputer, 3000);
 	}
 /* /Auto Run */
 /* Action */
@@ -50,6 +54,32 @@
 				$("#monitor_server_offline").html(data.offline);
 				$("#monitor_server_total").html(data.total);
 				$("#monitor_server_uptime").html(data.uptime + " %");
+			}
+		});
+	}
+	function GetStatsComputer()
+	{
+		$.ajax({
+			url: "../ajax/devices/computer.php",
+			dataType: "json",
+			success: function(data){
+				$("#monitor_computer_online").html(data.online);
+				$("#monitor_computer_offline").html(data.offline);
+				$("#monitor_computer_total").html(data.total);
+				$("#monitor_computer_uptime").html(data.uptime + " %");
+			}
+		});
+	}
+	function GetStatsVideo()
+	{
+		$.ajax({
+			url: "../ajax/devices/video.php",
+			dataType: "json",
+			success: function(data){
+				$("#monitor_video_online").html(data.online);
+				$("#monitor_video_offline").html(data.offline);
+				$("#monitor_video_total").html(data.total);
+				$("#monitor_video_uptime").html(data.uptime + " %");
 			}
 		});
 	}

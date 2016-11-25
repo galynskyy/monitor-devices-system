@@ -24,7 +24,7 @@
 	}
 /* /Description */
 /* Indicators */
-	.col-md-3 .panel-heading,
+	.col-md-2 .panel-heading,
 	.col-md-12 .panel-heading {
 		text-align: center;
 		text-decoration: underline;
@@ -32,21 +32,21 @@
 		font-size: 20px;
 		font-family: 'Roboto Condensed', sans-serif;
 	}
-	.col-md-3 .list-group-item span,
-	.col-md-3 .panel-body span,
+	.col-md-2 .list-group-item span,
+	.col-md-2 .panel-body span,
 	.col-md-12 .list-group-item span,
 	.col-md-12 .panel-body span {
 		font-weight: bold;
 	}
-	.col-md-3 .list-group .list-group-item,
-	.col-md-3 .panel-body p,
+	.col-md-2 .list-group .list-group-item,
+	.col-md-2 .panel-body p,
 	.col-md-12 .list-group .list-group-item,
 	.col-md-12 .panel-body p {
 		text-align: center;
 		font-size: 18px;
 		font-family: 'Roboto Condensed', sans-serif;
 	}
-	.col-md-3 #status_office_system {
+	.col-md-2 #status_office_system {
 		color: green;
 	}
 	.col-md-12 td {
