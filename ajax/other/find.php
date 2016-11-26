@@ -24,7 +24,7 @@
 		"down" => $result[0]["down"],
 		"up" => $result[0]["up"],
 		"type" => $result[0]["type"],
-		"offline" => $result_offline[0],
+		"offline" => $result_offline,
 		"status" => $result[0]["status"]
 	));
 ?>
