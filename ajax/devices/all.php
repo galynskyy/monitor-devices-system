@@ -15,6 +15,6 @@
 	$query->bindValue(":status", "0", PDO::PARAM_INT);
 	$query->execute();
 	$result = $query->fetchAll(PDO::FETCH_ASSOC);
-	
+	/*printf ($result->fetchColumn());*/
 	echo json_encode($result);
 ?>

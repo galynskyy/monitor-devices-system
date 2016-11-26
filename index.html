@@ -160,7 +160,47 @@
 						<div class="panel panel-danger">
 							<div class="panel-heading">Offline</div>
 							
-							<table class="table table-bordered" id="offline_devices"></table>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Имя устройства</th>
+										<th>IP-адрес</th>
+										<th>Категория</th>
+										<th>Время (Down)</th>
+									</tr>
+								</thead>
+								<tbody id="offline_devices"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-info">
+							<div class="panel-heading">Поиск</div>
+							<div class="panel-body">
+								<!--<p><span id="ticket_system_total"></span></p>-->
+								<form action="javascript:void(0);" class="form-inline" id="form_find">
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">Ip</label>
+										<input type="text" class="form-control" id="ip_form_find" placeholder="Введите IP-адрес">
+									</div>
+									<!--<div class="form-group">
+										<label class="sr-only" for="exampleInputPassword3">Password</label>
+										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
+									</div>-->
+									<button type="submit" class="btn btn-default">Искать</button>
+								</form>
+							</div>
+							<ul class="list-group">
+								<li class="list-group-item">Имя устройства: <span id="name_result_find">Пусто</span></li>
+								<li class="list-group-item">IP-адрес: <span id="ip_result_find">Пусто</span></li>
+								<li class="list-group-item">Время (Down): <span id="timed_result_find">Пусто</span></li>
+								<li class="list-group-item">Время (Up): <span id="timeu_result_find">Пусто</span></li>
+								<li class="list-group-item">Тип устройства: <span id="type_result_find">Пусто</span></li>
+								<li class="list-group-item">Количество (Down): <span id="offline_result_find">Пусто</span></li>
+								<li class="list-group-item">Статус: <span id="status_result_find">Пусто</span></li>
+							</ul>
 						</div>
 					</div>
 				</div>

@@ -32,7 +32,6 @@
 			dataType: "json",
 			success: function(data){
 				$("#offline_devices").html("");
-				console.log("clear");
 				$.each(data, function(i, item) {
 					$("#offline_devices").append("<tr>\
 						<td>" + item.name + "</td>\
@@ -122,4 +121,30 @@
 			}
 		});
 	}
+	$("#form_find").on("submit", function()
+	{
+		var ip_form = $("#ip_form_find");
+		
+		if(ip_form.val() == "")
+		{
+			ip_form.focus();
+		} else
+		{
+			$.ajax({
+				type: "POST",
+				url: "../ajax/other/find.php",
+				data: {"ip": ip_form.val()},
+				dataType: "json",
+				success: function(data){
+					$("#name_result_find").html(data.name);
+					$("#ip_result_find").html(data.ip);
+					$("#timed_result_find").html(data.down);
+					$("#timeu_result_find").html(data.up);
+					$("#type_result_find").html(data.type);
+					$("#offline_result_find").html(data.offline);
+					$("#status_result_find").html(data.status);
+				}
+			});
+		}
+	});
 /* /Action */
