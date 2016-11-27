@@ -53,6 +53,18 @@
 				$("#monitor_server_offline").html(data.offline);
 				$("#monitor_server_total").html(data.total);
 				$("#monitor_server_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_server_status").removeClass("status-offline");
+					$("#monitor_server_status").addClass("status-online");
+					$("#monitor_server_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_server_status").removeClass("status-online");
+					$("#monitor_server_status").addClass("status-offline");
+					$("#monitor_server_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -66,6 +78,18 @@
 				$("#monitor_computer_offline").html(data.offline);
 				$("#monitor_computer_total").html(data.total);
 				$("#monitor_computer_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_computer_status").removeClass("status-offline");
+					$("#monitor_computer_status").addClass("status-online");
+					$("#monitor_computer_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_computer_status").removeClass("status-online");
+					$("#monitor_computer_status").addClass("status-offline");
+					$("#monitor_computer_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -79,6 +103,18 @@
 				$("#monitor_video_offline").html(data.offline);
 				$("#monitor_video_total").html(data.total);
 				$("#monitor_video_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_video_status").removeClass("status-offline");
+					$("#monitor_video_status").addClass("status-online");
+					$("#monitor_video_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_video_status").removeClass("status-online");
+					$("#monitor_video_status").addClass("status-offline");
+					$("#monitor_video_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -92,6 +128,18 @@
 				$("#monitor_printer_offline").html(data.offline);
 				$("#monitor_printer_total").html(data.total);
 				$("#monitor_printer_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_printer_status").removeClass("status-offline");
+					$("#monitor_printer_status").addClass("status-online");
+					$("#monitor_printer_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_printer_status").removeClass("status-online");
+					$("#monitor_printer_status").addClass("status-offline");
+					$("#monitor_printer_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -105,6 +153,18 @@
 				$("#monitor_network_offline").html(data.offline);
 				$("#monitor_network_total").html(data.total);
 				$("#monitor_network_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_network_status").removeClass("status-offline");
+					$("#monitor_network_status").addClass("status-online");
+					$("#monitor_network_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_network_status").removeClass("status-online");
+					$("#monitor_network_status").addClass("status-offline");
+					$("#monitor_network_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -118,6 +178,18 @@
 				$("#monitor_phone_offline").html(data.offline);
 				$("#monitor_phone_total").html(data.total);
 				$("#monitor_phone_uptime").html(data.uptime + " %");
+				if(data.uptime == 100)
+				{
+					$("#monitor_phone_status").removeClass("status-offline");
+					$("#monitor_phone_status").addClass("status-online");
+					$("#monitor_phone_status").html("Все в норме");
+				}
+				else
+				{
+					$("#monitor_phone_status").removeClass("status-online");
+					$("#monitor_phone_status").addClass("status-offline");
+					$("#monitor_phone_status").html("Все плохо");
+				}
 			}
 		});
 	}
@@ -142,7 +214,18 @@
 					$("#timeu_result_find").html(data.up);
 					$("#type_result_find").html(data.type);
 					$("#offline_result_find").html(data.offline);
-					$("#status_result_find").html(data.status);
+					if(data.status == 0)
+					{
+						$("#status_result_find").removeClass("status-online");
+						$("#status_result_find").addClass("status-offline");
+						$("#status_result_find").html("Выключен");
+					}
+					else
+					{
+						$("#status_result_find").removeClass("status-offline");
+						$("#status_result_find").addClass("status-online");
+						$("#status_result_find").html("Работает");
+					}
 				}
 			});
 		}

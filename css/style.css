@@ -55,6 +55,8 @@
 		font-size: 18px;
 		font-family: 'Roboto Condensed', sans-serif;
 	}
+	.status-online { color: green }
+	.status-offline { color: red; }
 /* /Indicators */
 /* Find */
 	.col-md-12 .panel-heading {
