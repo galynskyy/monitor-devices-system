@@ -12,6 +12,8 @@
 		GetStatsPrinter();
 		GetStatsVideo();
 		GetStatsComputer();
+		NotifyDeviceOn();
+		NotifyDeviceOff();
 	}
 	function Update()
 	{
@@ -22,6 +24,8 @@
 		setInterval(GetStatsPrinter, 3000);
 		setInterval(GetStatsVideo, 3000);
 		setInterval(GetStatsComputer, 3000);
+		setInterval(NotifyDeviceOn, 5000);
+		setInterval(NotifyDeviceOff, 5000);
 	}
 /* /Auto Run */
 /* Action */
@@ -193,6 +197,30 @@
 			}
 		});
 	}
+	function NotifyDeviceOn()
+	{
+		$.ajax({
+			url: "../ajax/notify/on.php",
+			dataType: "json",
+			success: function(data){
+				$.each(data, function(i, item) {
+					$.notify("Device " + item.name + " is up", "success");
+				});
+			}
+		});
+	}
+	function NotifyDeviceOff()
+	{
+		$.ajax({
+			url: "../ajax/notify/off.php",
+			dataType: "json",
+			success: function(data){
+				$.each(data, function(i, item) {
+					$.notify("Device " + item.name + " is down", "error");
+				});
+			}
+		});
+	}
 	$("#form_find").on("submit", function()
 	{
 		var ip_form = $("#ip_form_find");
@@ -200,6 +228,7 @@
 		if(ip_form.val() == "")
 		{
 			ip_form.focus();
+			
 		} else
 		{
 			$.ajax({

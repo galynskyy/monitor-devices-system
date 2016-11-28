@@ -7,7 +7,7 @@
 		echo "Connection failed: " . $e->getMessage();
 	}
 	
-	$query = $conn->prepare("SELECT name, ip, down, type FROM devices WHERE status = :status");
+	$query = $conn->prepare("SELECT name, ip FROM devices WHERE status = :status AND down >= DATE_SUB(NOW(), INTERVAL 5 SECOND)");
 	$query->bindValue(":status", "0", PDO::PARAM_INT);
 	$query->execute();
 	$result = $query->fetchAll(PDO::FETCH_ASSOC);
