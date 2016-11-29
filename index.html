@@ -210,6 +210,72 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-info">
+							<div class="panel-heading">Добавление устройства</div>
+							<div class="panel-body">
+								<!--<p><span id="ticket_system_total"></span></p>-->
+								<form action="javascript:void(0);" class="form-inline" id="form_add">
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">Имя</label>
+										<input type="text" class="form-control" id="name_form_add" placeholder="Введите имя устройства">
+									</div>
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">IP</label>
+										<input type="text" class="form-control" id="ip_form_add" placeholder="Введите IP-адрес">
+									</div>
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">Тип</label>
+										<!--<input type="text" class="form-control" id="type_form_add" placeholder="Введите тип устройства">-->
+										<select class="form-control" id="type_form_add">
+											<option value="computer">Компьютер</option>
+											<option value="server">Сервер</option>
+											<option value="printer">Принтер</option>
+											<option value="network">Сеть</option>
+											<option value="video">Видеонаблюдение</option>
+											<option value="phone">Телефон</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">Пароль</label>
+										<input type="password" class="form-control" id="pass_form_add" placeholder="Введите пароль">
+									</div>
+									<!--<div class="form-group">
+										<label class="sr-only" for="exampleInputPassword3">Password</label>
+										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
+									</div>-->
+									<button type="submit" class="btn btn-default">Добавить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-danger">
+							<div class="panel-heading">Удаление устройства</div>
+							<div class="panel-body">
+								<!--<p><span id="ticket_system_total"></span></p>-->
+								<form action="javascript:void(0);" class="form-inline" id="form_remove">
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">IP</label>
+										<input type="text" class="form-control" id="ip_form_remove" placeholder="Введите IP-адрес">
+									</div>
+									<div class="form-group">
+										<label class="sr-only" for="exampleInputEmail3">Пароль</label>
+										<input type="password" class="form-control" id="pass_form_remove" placeholder="Введите пароль">
+									</div>
+									<!--<div class="form-group">
+										<label class="sr-only" for="exampleInputPassword3">Password</label>
+										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
+									</div>-->
+									<button type="submit" class="btn btn-default">Удалить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		<!-- /Delete -->
 		<!-- Footer -->
@@ -223,8 +289,8 @@
 		<!-- JS -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-			<script src="../js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha256-tSRROoGfGWTveRpDHFiWVz+UXt+xKNe90wwGn25lpw8=" crossorigin="anonymous"></script>
+			<script src="../js/main.js"></script>
 		<!-- /JS -->
 	</body>
 </html>

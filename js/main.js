@@ -228,7 +228,6 @@
 		if(ip_form.val() == "")
 		{
 			ip_form.focus();
-			
 		} else
 		{
 			$.ajax({
@@ -258,5 +257,64 @@
 				}
 			});
 		}
+	});
+	
+	$("#form_add").on("submit", function()
+	{
+		var name_form = $("#name_form_add");
+		var ip_form = $("#ip_form_add");
+		var type_form = $("#type_form_add");
+		var pass_form = $("#pass_form_add");
+		
+		if(name_form.val() == "")
+		{
+			name_form.focus();
+		} else if (ip_form.val() == "") {
+			ip_form.focus();
+		} else if (type_form.val() == "") {
+			type_form.focus();
+		} else if (pass_form.val() == "") {
+			pass_form.focus();
+		} else
+		{
+			$.ajax({
+				type: "POST",
+				url: "../ajax/other/add.php",
+				data: {"name": name_form.val(), "ip": ip_form.val(), "type": type_form.val(), "pass": pass_form.val()},
+				dataType: "json",
+				success: function(data){
+					$.notify(data.status, "info");
+				}
+			});
+		}
+	});
+	
+	$("#form_remove").on("submit", function()
+	{
+		var ip_form = $("#ip_form_remove");
+		var pass_form = $("#pass_form_remove");
+		
+		if(ip_form.val() == "")
+		{
+			ip_form.focus();
+		} else if (pass_form.val() == "") {
+			pass_form.focus();
+		} else
+		{
+			$.ajax({
+				type: "POST",
+				url: "../ajax/other/remove.php",
+				data: {"ip": ip_form.val(), "pass": pass_form.val()},
+				dataType: "json",
+				success: function(data){
+					$.notify(data.status, "info");
+				}
+			});
+		}
+	});
+	$("#form_change").on("submit", function()
+	{
+		var test = $("#sel-test").val();
+		console.log(test);
 	});
 /* /Action */
