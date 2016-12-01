@@ -61,13 +61,13 @@
 				{
 					$("#monitor_server_status").removeClass("status-offline");
 					$("#monitor_server_status").addClass("status-online");
-					$("#monitor_server_status").html("Все в норме");
+					$("#monitor_server_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_server_status").removeClass("status-online");
 					$("#monitor_server_status").addClass("status-offline");
-					$("#monitor_server_status").html("Все плохо");
+					$("#monitor_server_status").html("Плохо");
 				}
 			}
 		});
@@ -86,13 +86,13 @@
 				{
 					$("#monitor_computer_status").removeClass("status-offline");
 					$("#monitor_computer_status").addClass("status-online");
-					$("#monitor_computer_status").html("Все в норме");
+					$("#monitor_computer_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_computer_status").removeClass("status-online");
 					$("#monitor_computer_status").addClass("status-offline");
-					$("#monitor_computer_status").html("Все плохо");
+					$("#monitor_computer_status").html("Плохо");
 				}
 			}
 		});
@@ -111,13 +111,13 @@
 				{
 					$("#monitor_video_status").removeClass("status-offline");
 					$("#monitor_video_status").addClass("status-online");
-					$("#monitor_video_status").html("Все в норме");
+					$("#monitor_video_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_video_status").removeClass("status-online");
 					$("#monitor_video_status").addClass("status-offline");
-					$("#monitor_video_status").html("Все плохо");
+					$("#monitor_video_status").html("Плохо");
 				}
 			}
 		});
@@ -136,13 +136,13 @@
 				{
 					$("#monitor_printer_status").removeClass("status-offline");
 					$("#monitor_printer_status").addClass("status-online");
-					$("#monitor_printer_status").html("Все в норме");
+					$("#monitor_printer_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_printer_status").removeClass("status-online");
 					$("#monitor_printer_status").addClass("status-offline");
-					$("#monitor_printer_status").html("Все плохо");
+					$("#monitor_printer_status").html("Плохо");
 				}
 			}
 		});
@@ -161,13 +161,13 @@
 				{
 					$("#monitor_network_status").removeClass("status-offline");
 					$("#monitor_network_status").addClass("status-online");
-					$("#monitor_network_status").html("Все в норме");
+					$("#monitor_network_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_network_status").removeClass("status-online");
 					$("#monitor_network_status").addClass("status-offline");
-					$("#monitor_network_status").html("Все плохо");
+					$("#monitor_network_status").html("Плохо");
 				}
 			}
 		});
@@ -186,13 +186,13 @@
 				{
 					$("#monitor_phone_status").removeClass("status-offline");
 					$("#monitor_phone_status").addClass("status-online");
-					$("#monitor_phone_status").html("Все в норме");
+					$("#monitor_phone_status").html("Отлично");
 				}
 				else
 				{
 					$("#monitor_phone_status").removeClass("status-online");
 					$("#monitor_phone_status").addClass("status-offline");
-					$("#monitor_phone_status").html("Все плохо");
+					$("#monitor_phone_status").html("Плохо");
 				}
 			}
 		});
@@ -204,7 +204,7 @@
 			dataType: "json",
 			success: function(data){
 				$.each(data, function(i, item) {
-					$.notify("Device " + item.name + " is up", "success");
+					$.notify("Устройство " + item.name + " включилось", "success");
 				});
 			}
 		});
@@ -216,7 +216,7 @@
 			dataType: "json",
 			success: function(data){
 				$.each(data, function(i, item) {
-					$.notify("Device " + item.name + " is down", "error");
+					$.notify("Устройство " + item.name + " выключилось", "error");
 				});
 			}
 		});

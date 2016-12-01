@@ -24,11 +24,11 @@
 	$query->execute();
 	$result_total = $query->fetchColumn();
 	
-	$query = $conn->prepare("SELECT COUNT(id) FROM info WHERE type = :type AND status = :status AND DATE(time) >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY DATE(time)");
+	$query = $conn->prepare("SELECT id, type, status, time FROM info WHERE type = :type AND status = :status AND DATE(time) >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY name");
 	$query->bindValue(":type", "phone", PDO::PARAM_STR);
 	$query->bindValue(":status", "0", PDO::PARAM_STR);
 	$query->execute();
-	$result_status = $query->fetchColumn();
+	$result_status = $query->rowCount();
 	
 	if($result_status > 0)
 	{
