@@ -31,41 +31,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="/">Главная <span class="sr-only">(current)</span></a></li>
-							<!--<li><a href="/find.html">Поиск <span class="sr-only">(current)</span></a></li>
-							<li><a href="/">Логи <span class="sr-only">(current)</span></a></li>-->
-							<!--<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul>
-							</li>-->
 						</ul>
-						<!--<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search">
-							</div>
-							<button type="submit" class="btn btn-default">Submit</button>
-						</form>-->
-						<!--<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul>
-							</li>
-						</ul>-->
 					</div>
 				</div>
 			</nav>
@@ -163,6 +129,16 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
+						<div class="panel panel-info">
+							<div class="panel-heading">График стабильности</div>
+							<div class="panel-body">
+								<div id="chart_uptime_week" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
 						<div class="panel panel-danger">
 							<div class="panel-heading">Offline</div>
 							
@@ -185,16 +161,11 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">Поиск</div>
 							<div class="panel-body">
-								<!--<p><span id="ticket_system_total"></span></p>-->
 								<form action="javascript:void(0);" class="form-inline" id="form_find">
 									<div class="form-group">
 										<label class="sr-only" for="exampleInputEmail3">Ip</label>
 										<input type="text" class="form-control" id="ip_form_find" placeholder="Введите IP-адрес">
 									</div>
-									<!--<div class="form-group">
-										<label class="sr-only" for="exampleInputPassword3">Password</label>
-										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
-									</div>-->
 									<button type="submit" class="btn btn-default">Искать</button>
 								</form>
 							</div>
@@ -215,7 +186,6 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">Добавление устройства</div>
 							<div class="panel-body">
-								<!--<p><span id="ticket_system_total"></span></p>-->
 								<form action="javascript:void(0);" class="form-inline" id="form_add">
 									<div class="form-group">
 										<label class="sr-only" for="exampleInputEmail3">Имя</label>
@@ -227,7 +197,6 @@
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="exampleInputEmail3">Тип</label>
-										<!--<input type="text" class="form-control" id="type_form_add" placeholder="Введите тип устройства">-->
 										<select class="form-control" id="type_form_add">
 											<option value="computer">Компьютер</option>
 											<option value="server">Сервер</option>
@@ -241,10 +210,6 @@
 										<label class="sr-only" for="exampleInputEmail3">Пароль</label>
 										<input type="password" class="form-control" id="pass_form_add" placeholder="Введите пароль">
 									</div>
-									<!--<div class="form-group">
-										<label class="sr-only" for="exampleInputPassword3">Password</label>
-										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
-									</div>-->
 									<button type="submit" class="btn btn-default">Добавить</button>
 								</form>
 							</div>
@@ -256,7 +221,6 @@
 						<div class="panel panel-danger">
 							<div class="panel-heading">Удаление устройства</div>
 							<div class="panel-body">
-								<!--<p><span id="ticket_system_total"></span></p>-->
 								<form action="javascript:void(0);" class="form-inline" id="form_remove">
 									<div class="form-group">
 										<label class="sr-only" for="exampleInputEmail3">IP</label>
@@ -266,10 +230,6 @@
 										<label class="sr-only" for="exampleInputEmail3">Пароль</label>
 										<input type="password" class="form-control" id="pass_form_remove" placeholder="Введите пароль">
 									</div>
-									<!--<div class="form-group">
-										<label class="sr-only" for="exampleInputPassword3">Password</label>
-										<input type="date" class="form-control" id="date_form_find" placeholder="Введите дату">
-									</div>-->
 									<button type="submit" class="btn btn-default">Удалить</button>
 								</form>
 							</div>
@@ -282,7 +242,7 @@
 			<div class="container">
 				<hr>
 				<footer>
-					<p>&copy; 2016 STROP, Inc.</p>
+					<p>&copy; 2016-2017 STROP, Inc.</p>
 				</footer>
 			</div>
 		<!-- /Footer -->
@@ -290,7 +250,10 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha256-tSRROoGfGWTveRpDHFiWVz+UXt+xKNe90wwGn25lpw8=" crossorigin="anonymous"></script>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
 			<script src="../js/main.js"></script>
+			<script src="../js/chart.js"></script>
 		<!-- /JS -->
 	</body>
 </html>

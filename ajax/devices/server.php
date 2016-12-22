@@ -1,6 +1,6 @@
 <?php
 	try {
-		$conn = new PDO("mysql:host=localhost;dbname=monitor", "monitor", "monitor12qwaszxQWAS");
+		$conn = new PDO("mysql:host=localhost;dbname=base", "user", "pass");
 		$conn->exec("set names utf8");
 	}
 	catch (PDOException $e) {

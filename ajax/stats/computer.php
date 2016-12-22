@@ -8,31 +8,31 @@
 	}
 	
 	$query = $conn->prepare("SELECT COUNT(id) FROM devices WHERE type = :type AND status = :status");
-	$query->bindValue(":type", "phone", PDO::PARAM_STR);
+	$query->bindValue(":type", "computer", PDO::PARAM_STR);
 	$query->bindValue(":status", "1", PDO::PARAM_STR);
 	$query->execute();
 	$result_online = $query->fetchColumn();
 	
-	$query = $conn->prepare("SELECT COUNT(id) FROM devices WHERE type = :type AND status = :status");
-	$query->bindValue(":type", "phone", PDO::PARAM_STR);
+	$query = $conn->prepare("SELECT COUNT(id) FROM info WHERE type = :type AND status = :status");
+	$query->bindValue(":type", "computer", PDO::PARAM_STR);
 	$query->bindValue(":status", "0", PDO::PARAM_STR);
 	$query->execute();
 	$result_offline = $query->fetchColumn();
 	
 	$query = $conn->prepare("SELECT COUNT(id) FROM devices WHERE type = :type");
-	$query->bindValue(":type", "phone", PDO::PARAM_STR);
+	$query->bindValue(":type", "computer", PDO::PARAM_STR);
 	$query->execute();
 	$result_total = $query->fetchColumn();
 	
-	$query = $conn->prepare("SELECT id, type, status, time FROM info WHERE type = :type AND status = :status AND DATE(time) >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY name");
-	$query->bindValue(":type", "phone", PDO::PARAM_STR);
+	$query = $conn->prepare("SELECT COUNT(id) FROM info WHERE type = :type AND status = :status AND DATE(time) >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY DATE(time)");
+	$query->bindValue(":type", "computer", PDO::PARAM_STR);
 	$query->bindValue(":status", "0", PDO::PARAM_STR);
 	$query->execute();
-	$result_status = $query->rowCount();
+	$result_status = $query->fetchColumn();
 	
 	if($result_status > 0)
 	{
-		$result_uptime = (100 - (round(($result_status * 100) / $result_total)));
+		$result_uptime = round(($result_status * 100) / $result_total);
 	}
 	else
 	{
